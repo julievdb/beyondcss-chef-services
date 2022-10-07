@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.primary-navigation {
+  --flex-column-gap: #{size(48)};
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    font-size: fs(500);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: clr(neutral, 100);
+
+    &:is(:hover, :focus) {
+      opacity: 0.7;
+      text-decoration: underline;
+    }
+  }
+}

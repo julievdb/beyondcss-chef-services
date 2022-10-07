@@ -1,0 +1,19 @@
+@use '../abstracts/' as *;
+
+.grid-columns {
+  --small-total-columns: 1;
+  --medium-total-columns: 2;
+  --large-total-columns: 4;
+
+  display: grid;
+  grid-gap: var(--grid-gap, $grid-gap);
+  grid-template-columns: repeat(var(--small-total-columns), 1fr);
+
+  @include mq(medium) {
+    grid-template-columns: repeat(var(--medium-total-columns), 1fr);
+  }
+
+  @include mq(large) {
+    grid-template-columns: repeat(var(--large-total-columns), 1fr);
+  }
+}

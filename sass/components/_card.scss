@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $card-body-padding;
+  }
+
+  &__footer {
+  }
+
+  &[data-type='testimonial'] {
+    .card__body {
+      position: relative;
+      isolation: isolate;
+
+      &::before {
+        content: open-quote;
+        position: absolute;
+        top: -2.5rem;
+        left: 2rem;
+        font-family: $ff-display;
+        font-size: 15rem;
+        opacity: 0.1;
+      }
+
+      &::after {
+        content: close-quote;
+        visibility: hidden;
+        font-size: 0;
+        line-height: 0;
+      }
+    }
+  }
+}

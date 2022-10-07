@@ -3,6 +3,26 @@ $sizes: (
   12: 0.75rem,
   16: 1rem,
   20: 1.25rem,
+  24: 1.5rem,
   32: 2rem,
-  36: 2.25rem
+  36: 2.25rem,
+  48: 3rem
 );
+
+$grid-gap: 1.5rem; // 24px
+$grid-column-min-width: 25ch;
+
+$flex-group-gap: 1rem; // 16px
+
+$container-inline-padding: 1rem; // 16px
+$container-max-width: 60rem; // 1244px
+$container-max-width-wide: 75rem; // 1600px
+
+$region-padding: clamp(3rem, 10vh, 7rem); // 112px
+$region-xl-padding: clamp(13rem, 15vh, 20rem); // 320px
+
+$button-padding-y: 1.125em;
+$button-padding-x: 2em;
+$button-outline-size: 5px;
+
+$card-body-padding: clamp(2rem, 5vw, 5rem); // 80px
